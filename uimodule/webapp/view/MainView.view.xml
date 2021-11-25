@@ -3,13 +3,14 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
+
 >
     <Shell id="shell">
         <App id="app">
             <pages>
                 <Page id="page" title="{i18n>title}">
                   <VBox justifyContent="Center" width="100%" fitContainer="true">
-					<HBox justifyContent="Center" width="100%" wrap="Wrap">
+				          	<HBox justifyContent="Center" width="100%" wrap="Wrap">
                       <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>Add Student}"  press="onPressAddStudent"
                         subheader="{i18n>Add Student}">
                         <TileContent>

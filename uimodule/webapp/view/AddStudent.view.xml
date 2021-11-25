@@ -10,12 +10,7 @@
             <pages>
                 <Page id="page" title="{i18n>title}" showNavButton="true" navButtonPress="GoToBack">
                        <l:VerticalLayout class="sapUiContentPadding" width="100%">
-                          <Label text="Text" labelFor="inputText" />
-                          <Input
-                            id="inputText"
-                            placeholder="Enter text"
-                            class="sapUiSmallMarginBottom" />
-
+                       
                           <Label text="Fiscal Code" labelFor="inputFiscalCode" />
                           <Input
                             id="inputFiscalCode"
@@ -50,9 +45,24 @@
                             type="Age"
                             placeholder="Enter Age"
                             class="sapUiSmallMarginBottom" />
-
-                            <Button text="Submit" press=".onSubmit" />
-
+                            <HBox>
+                              <Button type="Send"
+                                  text="Send"
+                                  press="onPress"
+                                  ariaDescribedBy="sendButtonDescription genericButtonDescription">
+                                <layoutData>
+                                  <FlexItemData growFactor="1" />
+                                </layoutData>
+                              </Button>
+                              <Button type="Reject"
+                                  text="Cancel"
+                                  press="onPress"
+                                  ariaDescribedBy="cancelButtonDescription genericButtonDescription">
+                                <layoutData>
+                                  <FlexItemData growFactor="1" />
+                                </layoutData>
+                              </Button>
+                            </HBox>
                       </l:VerticalLayout>
                     <content />
                 </Page>

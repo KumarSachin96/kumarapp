@@ -3,14 +3,15 @@ sap.ui.define(
         "sap/ui/core/mvc/Controller",
         "sap/ui/core/routing/History",
         "sap/ui/core/UIComponent",
-        "com/nttdata/academy/kumarapp/model/formatter"
+        "com/nttdata/academy/kumarapp/model/formatter",
+        "sap.ui.define(['sap/m/MessageToast','sap/ui/core/mvc/Controller']"
     ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller 
      * @param {typeof sap.ui.core.routing.History} History 
      * @param {typeof sap.ui.core.UIComponent} UIComponent 
      */
-    function (Controller, History, UIComponent, formatter) {
+    function (Controller, History, UIComponent, formatter, MessageToast) {
         "use strict";
 
         return Controller.extend("com.nttdata.academy.kumarapp.controller.BaseController", {
@@ -69,7 +70,17 @@ sap.ui.define(
                 } else {
                     this.getRouter().navTo("appHome", {}, true /*no history*/);
                 }
-            }
+            },
+              var PageController = Controller.extend("sap.m.sample.Button.Page", {
+
+              onPress: function (evt) {
+              MessageToast.show(evt.getSource().getId() + " Pressed");
+		}
+	});
+
+	return PageController;
+
+});
         });
     }
 );
