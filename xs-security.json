@@ -1,0 +1,42 @@
+{
+  "xsappname": "AcademyUI5",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    },
+    {
+      "name": "$XSAPPNAME.Academy_Role",
+      "description": "Academy_Role"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": [
+        "uaa.user",
+        "xs_authorization.read"
+      ]
+    },
+    {
+      "name": "Academy_Role",
+      "description": "Academy_Role",
+      "scope-references": [
+        "uaa.user",
+        "$XSAPPNAME.Academy_Role"
+      ]
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "Academy_RoleCollections",
+      "description": "Academy_RoleCollections",
+      "role-template-references": [
+        "$XSAPPNAME.Academy_Role"
+      ]
+    }
+  ]
+}

@@ -10,6 +10,15 @@ sap.ui.define([
         return Controller.extend("com.nttdata.academy.kumarapp.controller.MainView", {
             onInit: function () {
 
+            },
+            onPressAddStudent: function (oEvent) {
+              var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+              oRouter.navTo("RouteAddStudentView");
+            },
+
+            onPressViewStudent: function (oEvent) {
+              var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+              oRouter.navTo("RouteViewStudentView");
             }
         });
     });

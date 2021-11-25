@@ -1,15 +1,24 @@
 {
   "welcomeFile": "uimodule/index.html",
-  "authenticationMethod": "none",
+  "authenticationMethod": "route",
   "logout": {
-    "logoutEndpoint": "/do/logout"
+    "logoutEndpoint": "/do/logout",
+    "logoutPage": "uimodule/index.html"
   },
   "routes": [
     {
       "source": "^/uimodule/(.*)$",
       "target": "$1",
-      "authenticationType": "none",
-      "localDir": "uimodule/webapp"
+      "authenticationType": "xsuaa",
+      "localDir": "uimodule/webapp",
+      "scope": "$XSAPPNAME.Academy_Role",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    },
+    {
+      "source": "^/uimodule/index.html",
+      "target": "index.html",
+      "localDir": "uimodule/webapp",
+      "cacheControl": "no-cache, no-store, must-revalidate"
     }
   ]
 }

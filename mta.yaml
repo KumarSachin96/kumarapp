@@ -12,12 +12,19 @@ modules:
       memory: 512M
     requires:
       - name: kumarapp_destination
+      - name: academy_xsuaa 
     build-parameters:
       builder: custom
       commands:
         - npm install
         - npm run build:ui --prefix ..
 resources:
+  - name: academy_xsuaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+        path: ./xs-security.json
+        service-plan: application
+        service: xsuaa
   - name: kumarapp_destination
     type: org.cloudfoundry.managed-service
     parameters:
@@ -26,3 +33,5 @@ resources:
       config:
         HTML5Runtime_enabled: true
         version: 1.0.0
+      
+

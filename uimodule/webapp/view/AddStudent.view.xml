@@ -1,0 +1,62 @@
+<mvc:View
+    controllerName="com.nttdata.academy.kumarapp.controller.AddStudent"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+>
+    <Shell id="shell1">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}" showNavButton="true" navButtonPress="GoToBack">
+                       <l:VerticalLayout class="sapUiContentPadding" width="100%">
+                          <Label text="Text" labelFor="inputText" />
+                          <Input
+                            id="inputText"
+                            placeholder="Enter text"
+                            class="sapUiSmallMarginBottom" />
+
+                          <Label text="Fiscal Code" labelFor="inputFiscalCode" />
+                          <Input
+                            id="inputFiscalCode"
+                            type="Fiscal Code"
+                            placeholder="Enter Fiscal Code"
+                            class="sapUiSmallMarginBottom" />
+
+                          <Label text="Name" labelFor="inputName" />
+                          <Input
+                            id="inputName"
+                            type="Name"
+                            placeholder="Enter Name"
+                            class="sapUiSmallMarginBottom" />
+
+                          <Label text="Surname" labelFor="inputSurname" />
+                          <Input
+                            id="inputSurname"
+                            type="Surname"
+                            placeholder="Enter a Surname"
+                            class="sapUiSmallMarginBottom" />
+
+                          <Label text="Birthday" labelFor="inputBirthday" />
+                          <Input
+                            id="inputBirthday"
+                            type="Birthday"
+                            placeholder="Enter Birthday"
+                            class="sapUiSmallMarginBottom" />
+
+                          <Label text="Age" labelFor="inputAge" />
+                          <Input
+                            id="inputAge"
+                            type="Age"
+                            placeholder="Enter Age"
+                            class="sapUiSmallMarginBottom" />
+
+                            <Button text="Submit" press=".onSubmit" />
+
+                      </l:VerticalLayout>
+                    <content />
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

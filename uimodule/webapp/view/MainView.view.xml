@@ -8,9 +8,26 @@
         <App id="app">
             <pages>
                 <Page id="page" title="{i18n>title}">
-                    <content />
+                  <VBox justifyContent="Center" width="100%" fitContainer="true">
+					<HBox justifyContent="Center" width="100%" wrap="Wrap">
+                      <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>Add Student}"  press="onPressAddStudent"
+                        subheader="{i18n>Add Student}">
+                        <TileContent>
+                          <ImageContent src="sap-icon://add-employee" />
+                        </TileContent>
+                      </GenericTile>
+                      <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>View Student}"  press="onPressViewStudent"
+                        subheader="{i18n>View Student}">
+                        <TileContent>
+                            <ImageContent src="sap-icon://legend" />
+                        </TileContent>
+                      </GenericTile>
+                    </HBox>
+                  </VBox>
+                <content />
                 </Page>
             </pages>
         </App>
     </Shell>
 </mvc:View>
+

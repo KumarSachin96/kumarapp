@@ -70,6 +70,16 @@
           "target": [
             "TargetMainView"
           ]
+        },
+        {
+          "name": "RouteAddStudentView",
+          "pattern": "RouteAddStudentView",
+          "target": "TargetAddStudentView"
+        },
+        {
+          "name": "RouteViewStudentView",
+          "pattern": "RouteViewStudentView",
+          "target": "TargetViewStudentView"
         }
       ],
       "targets": {
@@ -77,8 +87,19 @@
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "MainView",
           "viewName": "MainView"
+        },
+        "TargetAddStudentView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewName": "AddStudent"
+        },
+        "TargetViewStudentView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewName": "ViewStudent"
         }
       }
     },

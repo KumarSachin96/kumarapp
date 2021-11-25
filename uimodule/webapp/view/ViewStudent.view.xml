@@ -1,0 +1,17 @@
+<mvc:View
+    controllerName="com.nttdata.academy.kumarapp.controller.ViewStudent"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell2">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}" showNavButton="true" navButtonPress="GoToBack">
+
+                    <content />
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
